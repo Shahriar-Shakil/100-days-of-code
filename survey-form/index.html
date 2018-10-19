@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container ">
+    <h1 id="title">hey, You can Register Here!</h1>
+    <p id="description">We are the largest Web-Devloper Group In Bangladesh.You are very important to us.</p>
+<section class="form">
+    <form action="" id="servey-form">
+        <div class="row">
+            <div class="col-25">
+                <label for="name" id="name-label">* Name :</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="name" id="name" required placeholder="Enter your Name..">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="email" id="email-label">* Email :</label>
+            </div>
+            <div class="col-75">
+                <input type="email" name="email" id="email" required placeholder="Enter your Email..">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="age" id="number-label">* Age :</label>
+            </div>
+            <div class="col-75">
+                <input type="number" name="age" id="number" min="18" max="57" placeholder="Age" required >
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="country">You are from :</label>
+            </div>
+            <div class="col-75">
+                <select name="country" id="dropdown" class="dropdown">
+                    <option value="" disabled>Select Your Country</option>
+                    <option value="bangladesh">Bangladesh</option>
+                    <option value="Japan">Japan </option>
+                    <option value="India">India </option>
+                    <option value="Italy">Italy </option>
+                </select>
+
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="gender">Gender :</label>
+            </div>
+            <div class="col-75">
+                <ul>
+                    <li> <input type="radio" name="gender" value="male"> Male</li>
+                    <li> <input type="radio" name="gender" value="female"> Female</li>
+                    <li> <input type="radio" name="gender" value="other"> Other</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="expertise">Your Expertise :</label>
+            </div>
+            <div class="col-75">
+                <ul>
+                    <li><input type="checkbox" value="php"> PHP</li>
+                    <li><input type="checkbox" value="css"> CSS</li>
+                    <li><input type="checkbox" value="html"> HTML</li>
+                    <li><input type="checkbox" value="bootstrap"> Bootstrap</li>
+                    <li><input type="checkbox" value="jquery"> JQuery</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="comment">About Yourself :</label>
+            </div>
+            <div class="col-75">
+                <textarea name="comment" id="comments" cols="20" rows="5" placeholder="Tell us about your coding journey.."></textarea>
+            </div>
+        </div>
+
+    <button id="submit" type="submit">Submit</button>
+
+
+
+    </form>
+</section>
+</div>
+</body>
