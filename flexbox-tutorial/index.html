@@ -11,7 +11,7 @@
             padding: 0;
             list-style-type: none;
             background: black;
-            justify-content: flex-end;
+            justify-content: center;
             /* flex-direction: column;*/
         }
 
@@ -34,18 +34,51 @@
                 justify-content: space-around;
             }
         }
+
         @media all and (max-width: 600px) {
-            ul{flex-flow: column wrap;
-            
+            ul {
+                flex-flow: column wrap;
+
             }
-            ul li a{
+
+            ul li a {
                 text-align: center;
                 padding: 10px;
-                  border-top: 1px solid rgba(255,255,255,0.3); 
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+                border-top: 1px solid rgba(255, 255, 255, 0.3);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             }
         }
-      
+
+        /*text center*/
+        .box {
+            width: 100%;
+            height: 500px;
+            background-color: green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        /*img center*/
+        .box-2 {height: 300px;}
+
+        .box-2 .img-box {
+            background: #ddd;
+            display: flex;
+            height: 150px;
+            width: 200px;
+            float: left;
+            margin-right: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box-2 .img-box img {
+            width: 150px;
+            height: 110px;
+        }
+
     </style>
 </head>
 
@@ -57,8 +90,22 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">Home</a></li>
     </ul>
-    
-   
+
+    <div class="box">
+        <h1>center text with flex</h1>
+    </div>
+    <h4>center img on a div with flexbox</h4>
+    <div class="box-2">
+        <div class="img-box">
+            <img src="design-premium-logo-for-you.jpg" alt="">
+        </div>
+        <div class="img-box">
+            <img src="design-premium-logo-for-you.jpg" alt="">
+        </div>
+        <div class="img-box">
+            <img src="design-premium-logo-for-you.jpg" alt="">
+        </div>
+    </div>
 </body>
 
 </html>

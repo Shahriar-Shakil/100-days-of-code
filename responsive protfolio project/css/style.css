@@ -1,0 +1,170 @@
+.my-nav{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    display: block;
+}
+.top{
+    background-color: #0797D8;
+    width: 100%;
+    height: 210px;
+
+}
+.bottom{
+    background-color: #03A9F4;
+    width: 100%;
+    height: 440px;
+}
+.img-box{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top:100px;
+
+
+}
+#home img {
+    border-radius: 100px;
+    border:7px solid #83CBEC;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#welcome-section{
+   color: white;
+    margin-top: 100px;
+    text-align: center;
+    height: 100vh;
+}
+#welcome-section ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#welcome-section ul li{
+    float: left;
+width: 50px;
+    height:50px;
+    border:1px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 7px;
+
+
+}
+#welcome-section ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+
+
+}
+#welcome-section ul li:hover{
+    background-color: black;
+    color: white;
+}
+#welcome-section ul li a:hover{
+    color: white;
+}
+.custome-bg-dark{background-color:#232323 !important; }
+
+#projects{
+    background-color:white ;
+}
+
+#projects header{
+    font-size: 2em;
+text-align: center;
+}
+#projects .project-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:10px ;
+}
+#projects .project-item{
+    border:1px solid gray;
+    background-color: white;
+    text-align: center;
+    width: 250px;
+    height: 180px;
+
+}
+.project-item a{text-decoration: none;font-size: 1.3em;color: black}
+.show-all ul{
+    list-style-type: none;
+}
+.show-all ul li{
+    text-align: center;
+    margin: 15px 0;
+
+}
+.show-all ul li a{
+    border: 1px solid greenyellow;
+    padding: 5px 15px;
+
+    text-decoration: none;
+}
+.show-all ul li a:hover{
+
+}
+#profile-link{
+    color:black;
+    text-align: center;
+}
+.my-contact a{
+float: left;
+    font-weight: bold;
+   margin:  20px 7px ;
+    list-style-type: none;
+    border: 2px solid #90C695;
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+
+    background: #e0ebe8;
+    color: #008080;
+    text-decoration: none;
+}
+#contact .message{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#contact .message input,textarea{
+    width: 70%;
+    margin: 20px 0;
+    background-color: transparent;
+    padding: 1em;
+    border-radius: 5px;
+
+}
+::placeholder{color:white;}
+#button{
+    width: 20%;
+
+}
+
+
+@media screen and (max-width: 576px) {
+    #projects .project-items{
+        grid-template-columns: 1fr;
+       margin: 0 10% 0 13%;
+    }
+
+.my-contact{
+    text-align: right;
+}
+    #contact .message input,textarea, #button{
+        width: 100%;
+    }
+}
+
