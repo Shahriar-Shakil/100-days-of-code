@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>basic data structure</title>
+</head>
+<body>
+	
+	<script>
+		/*function loopy() {
+  while(true) {
+    console.log("Hello, world!");
+  }break;
+}
+loopy();*/
+
+/*let ourArray = [1,2,3];
+let ourVariable = ourArray[0];
+
+ourArray[0]="333"
+ console.log(ourArray);*/
+
+//splice()
+
+/* let myArray = [1,2,3,4,5];
+
+ myArray.splice(1,1,"two",3,78,97);
+ console.log(myArray)*/
+
+ //slice()
+
+/* function forecast(arr) {
+  // change code below this line
+  
+  return arr.slice(2,4);
+}
+
+// do not change code below this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+*/
+
+/*function copyMachine(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+  newArr.push([...arr]);
+    num--;
+  }
+  return newArr;
+}
+
+// change code here to test different cases:
+console.log(copyMachine([true, false, true], 3));*/
+
+//indexOf() method
+
+/*let arr = ["one","two",'three','four'];
+
+let rslt=arr.indexOf('on'); 
+console.log(rslt) // -1
+*/
+/*function quickCheck(arr, elem) {
+  // change code below this line
+return arr.indexOf(elem)>0?true:false;
+
+  // change code above this line
+}
+
+// change code here to test different cases:
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+*/
+
+/*function filteredArray(arr, elem) {
+  let newArr = [];
+  // change code below this line
+  
+ for (let i = 0; i < arr.length; i++) { 
+    if (arr[i].indexOf(elem)==-1){ //Checks every parameter for the element and if is NOT there continues the code
+          newArr.push(arr[i]); //Inserts the element of the array in the new filtered array
+            };
+          };
+
+  // change code above this line
+  return newArr;
+};
+// change code here to test different cases:
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 9]], 3));*/
+
+/*let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+// do not change code above this line
+
+function checkInventory(scannedItem) {
+  // change code below this line
+return foods[scannedItem];
+}
+
+// change code below this line to test different cases:
+console.log(checkInventory("apples"));*/
+
+// for in 
+
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+/*function isEveryoneHere(obj) {
+ return obj.hasOwnProperty('Alan','Jeff','Sarah','Ryan')?true:false
+
+}
+
+console.log(isEveryoneHere(users));*/
+
+function countOnline(obj) {
+  // change code below this line
+ /* let count = 0;
+for (let x in obj){
+  if (obj[x].online=== true){
+  	 count++;
+  }
+
+}
+return count++;*/
+for(let x in obj){
+	console.log(obj[x])
+  // change code above this line
+}
+}
+
+//console.log(countOnline(users));
+
+// Modify an Array Stored in an Object
+
+let user = {
+  name: 'Kenneth',
+  age: 28,
+  data: {
+    username: 'kennethCodesAllDay',
+    joinDate: 'March 26, 2016',
+    organization: 'freeCodeCamp',
+    friends: [
+      'Sam',
+      'Kira',
+      'Tomo'
+    ],
+    location: {
+      city: 'San Francisco',
+      state: 'CA',
+      country: 'USA'
+    }
+  }
+};
+
+function addFriend(userObj, friend) {
+  // change code below this line  
+let frndz = userObj.data.friends.push(friend);
+ return userObj.data.friends;
+  // change code above this line
+}
+
+//console.log(addFriend(user, 'korim'));
+/*
+let myObj={a:1,b:2,c:3};
+
+let newArr = Object.keys(myObj)
+
+for(let i = 0; i <newArr.length;i++){
+if (newArr[i])
+	console.log(i)
+}
+console.log(newArr)*/
+
+
+
+
+
+	</script>
+</body>
+</html>

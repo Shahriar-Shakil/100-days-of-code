@@ -92,9 +92,9 @@ for(let i = 0;i<age.length;i++){
 	ageSum += age[i];
 }*/
 
-const ageSum = age.reduce((total,age)=> total + age,0);
+/*const ageSum = age.reduce((total,age)=> total + age,0);
 
-console.log(ageSum);
+console.log(ageSum);*/
 
 //get total years of all companies
 /*const totalYears = companies.reduce(function(total,company){
@@ -102,7 +102,7 @@ console.log(ageSum);
 },0);*/
 
 
-const totalYears = companies.reduce((total,company)=>total+(company.end-company.start),0)
+/*const totalYears = companies.reduce((total,company)=>total+(company.end-company.start),0)
 console.log(totalYears);
 
 const combaine = age
@@ -111,4 +111,13 @@ const combaine = age
 .sort((a,b)=>a-b)
 .reduce((a,b)=>a+b,0)
 
-console.log(combaine)
+console.log(combaine)*/
+
+//map
+
+/*let input = [1,2,3,4];
+
+let output =input.map(function(values/*,index,array*/){
+	return values*2
+});
+console.log(output);*/
