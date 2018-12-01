@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>palindrom</title>
+</head>
+<body>
+	
+
+	<script>
+		
+//01 Palindrome Checker
+function palindrome(str) {
+  let myStr = str.toLowerCase();
+//change string to lowerCase so no case sensative issues
+for(var i=0;i<myStr.length;i++){
+	myStr=myStr.replace(" ","")
+	myStr=myStr.replace(",","")
+	myStr=myStr.replace(".","")
+    myStr=myStr.replace("_","")
+    myStr=myStr.replace("/","")
+  myStr=myStr.replace("(","")
+  myStr=myStr.replace(")","")
+  myStr=myStr.replace("-","")
+  //Loop to replace special characters withOut using regular expression
+}
+
+let duplicate = myStr.split("").reverse().join("")
+  //create a copy of our string and reverse it
+  console.log(duplicate)
+
+  if(duplicate===myStr){
+  	return true
+  }else{
+  	return false
+  }
+
+}
+
+
+
+
+console.log(palindrome("nope"));
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

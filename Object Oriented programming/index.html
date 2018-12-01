@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>OOP</title>
+</head>
+<body>
+	
+
+
+
+
+	<script>
+		
+/*let dog = {
+  name: "Spot",
+  numLegs: 4,
+  sayLegs(){
+  	return 'his name is ${dog.name}';
+  }
+  
+  
+};
+
+console.log(dog.sayLegs());
+*/
+
+//understand for in loop // hasOwnProperty
+
+/*function Bird(name) {
+  this.name = name;
+  this.numLegs = 2;
+}
+
+let canary = new Bird("Tweety");
+let ownProps = [];
+// Add your code below this line
+for(let property in canary){
+	if(canary.hasOwnProperty(property)){
+		ownProps.push(property);
+	}
+}
+console.log(ownProps)
+*/
+
+// difference between Own property and prototype Property 
+
+/*function Dog(name) {
+  this.name = name;
+}
+//Dog.prototype.numLegs=4;
+Dog.prototype={
+	constructor:Dog,  // Remember to set constructor prototype when chanching the prototype.
+	numLegs:2,
+	eat(){},
+	describe(){}
+}
+
+let beagle = new Dog("Snoopy");
+
+let ownProps = [];
+let prototypeProps = [];
+
+for (let prop in beagle){
+  if (beagle.hasOwnProperty(prop)){
+    ownProps.push(prop);
+  }else{
+  	prototypeProps.push(prop)
+  	
+  }
+}
+//console.log(prototypeProps.slice(1))
+//console.log(beagle.constructor===Dog)
+//console.log(beagle.numLegs)
+console.log( Object.prototype.isPrototypeOf(Dog.prototype))//object
+
+function Bird(){
+	this.name = "Doyel";
+}
+let nationalBird =new Bird();
+Bird.prototype=Object.create(Dog.prototype)// create inheritence 
+console.log(nationalBird.name);
+
+
+Bird.prototype.color="black";
+
+/*console.log(Bird.prototype.color)
+console.log(nationalBird.numLegs)
+console.log(nationalBird.hasOwnProperty("name"))
+
+
+//////////////Prototype Inheritence Chain //////
+
+function Dog(name) {
+  this.name = name;
+}
+
+let beagle2 = new Dog("Snoopy");
+
+//Dog.prototype.isPrototypeOf(beagle);  // => true
+
+// Fix the code below so that it evaluates to true
+
+
+console.log(Object.prototype.isPrototypeOf(Dog.prototype));
+
+*/
+/*function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal, 
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+// Add your code below this line
+
+let duck = Object.create(Animal.prototype); // Change this line
+let beagle = Object.create(Animal.prototype);; // Change this line
+
+duck.eat(); // Should print "nom nom nom"
+beagle.eat(); // Should print "nom nom nom"
+
+// Set the Child's Prototype to an Instance of the Parent
+function Dog() { }
+
+// Add your code below this line
+Dog.prototype = Object.create(Animal.prototype)
+
+let spot= new Dog();
+//spot.eat();  // Should print "nom nom nom"
+
+//console.log(spot.constructor)  function Animal(){...}
+Dog.prototype.constructor=Dog
+console.log(spot.constructor)*/
+
+
+
+//Override inherited Method//
+
+
+
+/*function Animal() { }
+Animal.prototype.eat = function() {
+  return "nom nom nom";
+};
+function Bird() { }
+
+// Inherit all methods from Animal
+Bird.prototype = Object.create(Animal.prototype);
+
+// Bird.eat() overrides Animal.eat()
+Bird.prototype.eat = function() {
+  return "peck peck peck";
+};
+*/
+
+
+
+///Use Closure to Protect Properties Within an Object from Being Modified Externally//
+
+/*function Bird() {
+  let hatchedEgg = 10; // private property
+
+  this.getHatchedEggCount = function() { // publicly available method that a bird object can use
+    console.log(hatchedEgg) ;
+  };
+}
+
+let ducky = new Bird();*/
+//console.log(ducky.getHatchedEggCount()); // returns 10
+
+
+
+
+/*(function () {
+  console.log("Chirp, chirp!");
+})();
+*/
+
+//invoked function and mixin
+
+/*let motionModule= (function(){
+return {
+	glideMixin(obj){
+obj.glide = function(){
+	console.log("Gliding on the water")
+	};
+},
+flyMixin(obj){
+obj.fly=function(){
+	console.log("Flying, wooosh!")
+};
+}
+}
+})();
+
+motionModule.glideMixin(ducky);
+ducky.glide();
+ducky.getHatchedEggCount();*/
+
+
+
+
+
+
+
+
+
+
+	</script>
+	scr
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic algorithm</title>
+</head>
+<body>
+	
+
+	<script>
+	
+	//Convert Celsius to Fahrenheit	
+/*function convertToF(celsius) {
+  let fahrenheit= (celsius*9/5)+32;  //solved 
+  return fahrenheit;
+}
+
+console.log(convertToF(30));
+*/
+// Reverse a string
+
+function reverseString(str) {
+  return str.split('');
+}
+
+//console.log(reverseString("hello"))
+
+/*let arr = [1,2,3,4]
+ let join = arr.join(" ");
+ console.log(join)*/
+
+
+//recursion and factorialize
+
+/*c = 10 ;
+while (c>-0){
+	console.log(c--)
+}*/
+
+/*c = function(v){
+	if (v>0){
+		document.write(v)
+		return c(v-1);
+
+	}else {
+		return v;
+	}
+}
+c(10);*/
+
+//factorial
+/*f = function(num){
+	if(num<=0){
+		return 1;
+	}
+		return num*f(num-1)
+		//return (num<=0) ? true : false
+	
+}
+console.log(f(0));
+*/
+//find a longest word in a string
+
+
+/*function findLongestWordLength(str) {
+	let biggestWord = 0;
+	let splitString = str.split(" ");
+	for(let i=0;i<splitString.length;i++){
+		if(biggestWord<splitString[i].length){
+			biggestWord = splitString[i].length;
+		}
+	}
+	return biggestWord
+}
+
+console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"));*/
+
+//Return Largest number in array
+
+function largestOfFour(arr) {
+ let rslt = [];
+ for(let i=0;i<arr.length;i++){
+ 	let largestNumber=arr[i][0];
+ 	for(let j=0;j<arr[i].length;j++){
+ 		if(largestNumber<arr[i][j]){
+ 			largestNumber = arr[i][j]
+ 		}
+ 	}
+ 	rslt[i]= largestNumber;
+ }
+ //console.log(largeNumber);
+ return rslt;
+}
+
+//console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+
+
+/*function largestOfFour(arr) {
+  return arr.map(function(group){
+    return group.reduce(function(prev, current) {
+      return (current > prev) ? current : prev;
+    });
+  });
+}
+console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));*/
+
+
+//confirm the Ending
+function confirmEnding(str, target) {
+  // "Never give up and good luck will find you."
+  // -- Falcor
+
+/*  let test = str.length - target.length
+  console.log(str.slice(24))*/
+ /* console.log(test === target)
+  console.log(str.length)
+  console.log(target.length)*/
+  //return str.slice(str.length - target.length) === target;
+
+//endWith method
+ // return str.endsWith('name',str.length);
+
+//.substr() method
+if (str.substr(str.length - target.length)===target){
+	return true;
+}else {
+	return false;
+}
+
+}
+
+//console.log(confirmEnding("He has to give me a new name", "name"));
+
+//repeat a string 
+/*function repeatStringNumTimes(str, num) {
+  // repeat after me
+  let newStr = "";
+  for(let i=0;i<num;i++){
+  	newStr += str;
+  }
+  return newStr;
+}
+
+console.log(repeatStringNumTimes("*", 3));*/
+
+//turncate a String
+
+/*function truncateString(str, num) {
+  // Clear out that junk in your trunk
+  if(str.length>num&& num>3){
+  	return str.slice(0,(num-3))+'...';
+  }else if(str.length>num&&num<=3){
+  	return str.slice(0,num)+'...'
+  }else {
+  	return str;
+  }
+}
+
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", 11));
+*/
+
+//
+/*function booWho(bool) {
+ return typeof bool ==='boolean';
+  
+}
+
+console.log(booWho(23));
+*/
+
+
+// Title Case a Sentence UpperCase first letter
+
+//last letter upperCase
+/*function titleCase(str) {
+	let arrayOfString = str.split(" ");
+	for(let i=0;i<arrayOfString.length;i++){
+		let placeHolder = arrayOfString[i];
+		//console.log(placeHolder.length)
+		let upLetter = placeHolder.charAt(placeHolder.length-1).toUpperCase();
+		console.log(upLetter)
+		placeHolder = placeHolder.slice(0,placeHolder.length-1).toLowerCase();
+		//console.log(placeHolder)
+		arrayOfString[i]=placeHolder.concat(upLetter);
+
+	}
+//console.log(arrayOfString)
+	str = arrayOfString.join(" ")
+  return str;
+}
+
+console.log(titleCase("I'm a little tea pot"));*/
+
+//bouncer
+/*function bouncer(arr) {
+	let newA = [];
+	for (let i=0;i<arr.length;i++){
+		if(Boolean(arr[i])===true){
+			newA.push(arr[i])
+		}else {
+			newA
+		}
+		
+
+	}
+  console.log(newA)
+}
+
+console.log(bouncer([false, null, 0, NaN, undefined, "",23]));
+*/
+
+//Mutation 
+/*function mutation(arr) {
+  let word1 = arr[0].toLowerCase();
+  let word2 = arr[1].toLowerCase();
+  //console.log(word1)
+  for(let i=0;i<word2.length;i++){
+    //console.log(word2[i])
+    let value = word1.indexOf(word2[i]);
+    if(value===-1){
+    	return false;
+    }
+  }
+   return true;
+}
+
+console.log(mutation(["hello", "heyo"]));*/
+
+//chunky monkey
+
+/*function chunkArrayInGroups(arr, size) {
+  // Break it up.
+var holderArray =[];
+var count =0;
+while(count<arr.length){
+	console.log(arr.length)
+holderArray.push(arr.slice(count,count=count+size));
+//console.log(arr.slice(count,count=count+size))
+
+}
+console.log(holderArray)
+  return holderArray;
+}
+
+chunkArrayInGroups([0, 1, 2, 3,6,7,4, 5,9], 4);*/
+
+
+/*let aa4 =[0,1,2,3,4,5]
+
+console.log(aa4.slice(0,2))
+console.log(aa4)*/
+
+//another way cuhnky monkey
+
+function chunkArrayInGroups(arr, size) {
+  // Break it up.
+  var group = [];
+  while(arr.length>0){
+  	group.push(arr.slice(0,size));
+  	arr= arr.slice(size)
+  	console.log(arr)
+  }
+  return group;
+}
+
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
