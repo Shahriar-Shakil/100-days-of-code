@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ceasars cipher</title>
+</head>
+<body>
+	
+
+
+
+	<script>
+		
+function rot13(str) { // LBH QVQ VG!
+  let strArr = str.split("");//string to Array
+  let resultArr = [];//Our result goes here
+  //create an alphabet character array that goes past z by 13 letter starting with a
+  let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z','A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'];
+//Itterate through inputted string array
+for(let i=0;i<strArr.length;i++){
+	//if character value is not in alphabet
+	if(alphabet.indexOf(strArr[i])===-1){
+		//Add that value  to the result Array
+		resultArr.push(strArr[i])
+	}else{
+		//Itterate through alphabet
+		for(let j=0;j<alphabet.length;j++){
+			//if current value in array is equal to alphabet
+			if(strArr[i]===alphabet[j]){
+				//add ther va;ue to resultArr + 13 index shifts in alphabet
+				resultArr.push(alphabet[j+13])
+			}
+		}
+	}
+}
+
+  return resultArr.join("")
+}
+
+
+
+
+// Change the inputs below to test
+console.log(rot13("SERR PBQR PNZC!"));
+
+
+
+
+
+
+	</script>
+</body>
+</html>

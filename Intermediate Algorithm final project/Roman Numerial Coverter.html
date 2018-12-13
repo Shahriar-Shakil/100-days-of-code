@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Roman Numerial</title>
+</head>
+<body>
+	
+
+	<script>
+
+		//solution of stack Overflow
+/*		var romanMatrix = [
+  [1000, 'M'],
+  [900, 'CM'],
+  [500, 'D'],
+  [400, 'CD'],
+  [100, 'C'],
+  [90, 'XC'],
+  [50, 'L'],
+  [40, 'XL'],
+  [10, 'X'],
+  [9, 'IX'],
+  [5, 'V'],
+  [4, 'IV'],
+  [1, 'I']
+];
+
+function convertToRoman(num) {
+  if (num === 0) {
+    return '';
+  }
+  for (var i = 0; i < romanMatrix.length; i++) {
+    if (num >= romanMatrix[i][0]) {
+    	console.log(romanMatrix[i][0])
+    	console.log(romanMatrix[i][1])
+
+      return romanMatrix[i][1] + convertToRoman(num - romanMatrix[i][0]);
+    }
+  }
+}
+console.log(convertToRoman(16))*/
+
+
+//02 solved by me
+function convertToRoman(num) {
+ let romanMatrix = [
+  [1000, 'M'],
+  [900, 'CM'],
+  [500, 'D'],
+  [400, 'CD'],
+  [100, 'C'],
+  [90, 'XC'],
+  [50, 'L'],
+  [40, 'XL'],
+  [10, 'X'],
+  [9, 'IX'],
+  [5, 'V'],
+  [4, 'IV'],
+  [1, 'I']
+]
+
+
+for(let i=0;i<romanMatrix.length;i++){
+	if(num===0){
+	return ""
+}
+	else if(num >= romanMatrix[i][0]){
+		return romanMatrix[i][1] + convertToRoman(num - romanMatrix[i][0])
+	}
+}
+
+
+}
+
+console.log(convertToRoman(7));
+
+
+
+
+	</script>
+</body>
+</html>
